@@ -6,5 +6,5 @@ wget -O - https://raw.githubusercontent.com/flying1574/PalServerInstallScript/ma
 
 ## For WindowsServer 2022
 ```bash
-wget -O - https://raw.githubusercontent.com/flying1574/PalServerInstallScript/main/winInstall.sh|sh
+wget -O - https://raw.githubusercontent.com/flying1574/PalServerInstallScript/main/winInstall.ps1|sh
 ```

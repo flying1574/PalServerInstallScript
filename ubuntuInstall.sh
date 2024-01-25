@@ -47,6 +47,7 @@ ExecStart=$steam_user_path/Steam/steamapps/common/PalServer/PalServer.sh -useper
 WantedBy=multi-user.target
 EOF
 
+echo "Using default configuration....."
 chmod 777 /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini 
 cp /home/steam/Steam/steamapps/common/PalServer/DefaultPalWorldSettings.ini /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
 

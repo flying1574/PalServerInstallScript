@@ -47,16 +47,6 @@ ExecStart=$steam_user_path/Steam/steamapps/common/PalServer/PalServer.sh -useper
 WantedBy=multi-user.target
 EOF
 
-echo "Using default configuration....."
-sleep 8
-export steam_user=steam
-export log_path=/tmp/pal_server.log
-export steam_user_path=~steam
-export steamcmd_path=$(whereis steamcmd|awk '{print $2}')
-
-sudo \cp $steam_user_path/Steam/steamapps/common/PalServer/DefaultPalWorldSettings.ini $steam_user_path/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
-sudo chmod 777 $steam_user_path/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini 
-
 sudo mv $systemd_unit.service /usr/lib/systemd/system/
 echo "Starting palServer..."
 sudo systemctl enable $systemd_unit

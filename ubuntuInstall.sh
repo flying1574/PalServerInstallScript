@@ -48,8 +48,8 @@ WantedBy=multi-user.target
 EOF
 
 echo "Using default configuration....."
-chmod 777 /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini 
-sudo \cp -f /home/steam/Steam/steamapps/common/PalServer/DefaultPalWorldSettings.ini /home/steam/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+sudo \cp $steam_user_path/Steam/steamapps/common/PalServer/DefaultPalWorldSettings.ini $steam_user_path/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+sudo chmod 777 $steam_user_path/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini 
 
 sudo mv $systemd_unit.service /usr/lib/systemd/system/
 echo "Starting palServer..."

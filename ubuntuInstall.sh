@@ -48,6 +48,7 @@ WantedBy=multi-user.target
 EOF
 
 echo "Using default configuration....."
+sleep 5
 sudo \cp $steam_user_path/Steam/steamapps/common/PalServer/DefaultPalWorldSettings.ini $steam_user_path/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
 sudo chmod 777 $steam_user_path/Steam/steamapps/common/PalServer/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini 
 
